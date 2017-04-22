@@ -432,6 +432,8 @@ class GiftedChat extends React.Component {
     if (this.props.renderChatFooter) {
       const footerProps = {
         ...this.props,
+        text: this.state.text,
+        onSend: this.onSend,
       };
       return this.props.renderChatFooter(footerProps);
     }
